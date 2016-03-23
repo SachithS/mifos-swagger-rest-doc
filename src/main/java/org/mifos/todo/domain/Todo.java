@@ -4,6 +4,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import org.springframework.data.annotation.Id;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * @author Sachith Senarathne
  * <p>Domain object for the application</p>
@@ -21,14 +25,18 @@ public class Todo {
 		return id;
 	}
 
+	
 	public void setId(String id) {
 		this.id = id;
 	}
 
+	
 	public String getTitle() {
 		return title;
 	}
 
+	@JsonProperty(required = true)
+    @ApiModelProperty(notes = "Title of the TODO task", required = true)
 	public void setTitle(String title) {
 		this.title = title;
 	}
@@ -37,6 +45,8 @@ public class Todo {
 		return message;
 	}
 
+	@JsonProperty(required = true)
+    @ApiModelProperty(notes = "Message of the TODO task", required = true)
 	public void setMessage(String message) {
 		this.message = message;
 	}
