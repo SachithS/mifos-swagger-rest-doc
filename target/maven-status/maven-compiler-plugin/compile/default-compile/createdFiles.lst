@@ -1,0 +1,4 @@
+org/mifos/todo/domain/Todo.class
+org/mifos/todo/repository/TodoRepository.class
+org/mifos/todo/controller/TodoController.class
+org/mifos/todo/Application.class
