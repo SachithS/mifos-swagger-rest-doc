@@ -4,6 +4,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import org.springframework.data.annotation.Id;
 
+/**
+ * @author Sachith Senarathne
+ * <p>Domain object for the application</p>
+ *
+ */
 public class Todo {
 
 	@Id

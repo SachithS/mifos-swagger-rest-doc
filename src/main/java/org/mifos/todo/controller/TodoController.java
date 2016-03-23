@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Sachith Senarathne
+ * <p>This will act as main controller class of the application</p>
  *
  */
 @RestController
@@ -25,7 +26,7 @@ public class TodoController {
 
 	/**
 	 * @param todoMap
-	 * @return
+	 * @return response map with todo object and message
 	 */
 	@RequestMapping(method = RequestMethod.POST)
 	public Map<String, Object> createTodo(@RequestBody Map<String, Object> todoMap) {
@@ -41,7 +42,7 @@ public class TodoController {
 
 	/**
 	 * @param todoid
-	 * @return
+	 * @return relevant todo object to id
 	 */
 	@RequestMapping(method = RequestMethod.GET, value = "/{todoid}")
 	public Todo getTodo(@PathVariable("todoid") String todoid) {
@@ -51,7 +52,7 @@ public class TodoController {
 	/**
 	 * @param todoid
 	 * @param todomap
-	 * @return
+	 * @return response map with updated todo and message for user
 	 */
 	@RequestMapping(method = RequestMethod.PUT, value = "/{todoid}")
 	public Map<String, Object> editTodo(@PathVariable("todoid") String todoid,@RequestBody Map<String, Object> todomap) {
@@ -65,7 +66,7 @@ public class TodoController {
 	}
 
 	/**
-	 * @return
+	 * @return response map with size of the list and list of todo objects
 	 */
 	@RequestMapping(method = RequestMethod.GET)
 	public Map<String, Object> getAllTodos() {
